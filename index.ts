@@ -58,8 +58,6 @@ try {
   userEmail = payload.pusher ? (payload.pusher.email || userEmail) : userEmail
   if (userName !== '') exec(`git config --global user.name "${userName}"`)
   if (userEmail !== '') exec(`git config --global user.email "${userEmail}"`)
-
-  console.log({ payload })
 } catch (error) {
   setFailed(error.message)
 }
